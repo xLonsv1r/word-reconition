@@ -1,4 +1,3 @@
 dataset/*
-dataset
-data.json
+classifier/data.json
 test/*
