@@ -11,7 +11,6 @@ BATCH_SIZE = 32
 PATIENCE = 5
 LEARNING_RATE = 0.0001
 
-
 def load_data(data_path):
     
     with open(data_path, "r") as fp:
@@ -25,10 +24,8 @@ def load_data(data_path):
 
 def prepare_dataset(data_path, test_size=0.2, validation_size=0.2):
     
-
     # load dataset
     X, y = load_data(data_path)
-
     # create train, validation, test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
     X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train, test_size=validation_size)
@@ -134,11 +131,9 @@ def main():
 
    
     history = train(model, EPOCHS, BATCH_SIZE, PATIENCE, X_train, y_train, X_validation, y_validation)
-
    
     plot_history(history)
 
-    
     test_loss, test_acc = model.evaluate(X_test, y_test)
     print("\nTest loss: {}, test accuracy: {}".format(test_loss, 100*test_acc))
 
