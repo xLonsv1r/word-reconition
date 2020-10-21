@@ -6,22 +6,16 @@ SAVED_MODEL_PATH = "model.h5"
 SAMPLES_TO_CONSIDER = 22050
 
 class _Keyword_Spotting_Service:
-    """Singleton class for keyword spotting inference with trained models.
-    :param model: Trained model
-    """
+    
 
     model = None
     _mapping = [
         "down",
-        "off",
-        "on",
-        "no",
-        "yes",
-        "stop",
-        "up",
-        "right",
+        "go",
         "left",
-        "go"
+        "no",
+        "off",
+        "on"
     ]
     _instance = None
 
